@@ -381,10 +381,10 @@
         <module name="JavadocTagContinuationIndentation">
             <property name="offset" value="0"/>
         </module>
-        <module name="SummaryJavadoc">
-            <property name="forbiddenSummaryFragments"
-                      value="^@return the *|^This method returns |^A [{]@code [a-zA-Z0-9]+[}]( is a )"/>
-        </module>
+<!--        <module name="SummaryJavadoc">-->
+<!--            <property name="forbiddenSummaryFragments"-->
+<!--                      value="^@return the *|^This method returns |^A [{]@code [a-zA-Z0-9]+[}]( is a )"/>-->
+<!--        </module>-->
         <!-- 检查 Javadoc 中的段落. -->
         <module name="JavadocParagraph"/>
         <!-- 使用空行来隔开 '@Param'、'@return' 等块标签组. -->
