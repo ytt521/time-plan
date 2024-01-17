@@ -11,16 +11,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/captcha")
+@RequestMapping("/pub")
 @Api(tags = "图形验证码")
 @AllArgsConstructor
 public class CaptchaController {
 
     private CaptchaService captchaService;
 
-    @GetMapping("/generate")
+    @GetMapping("/captcha")
     @ApiOperation("生成图形验证码")
     public R<CaptchaVO> generate() {
         return R.success(captchaService.generate());
     }
+
 }
