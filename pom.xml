@@ -31,12 +31,16 @@
         <lombok.version>1.18.10</lombok.version>
         <mysql-connector.version>8.0.29</mysql-connector.version>
         <sa-token-spring-boot-starter.version>1.37.0</sa-token-spring-boot-starter.version>
+        <sa-token-jwt.version>1.37.0</sa-token-jwt.version>
+        <sa-token-redis-jackson.version>1.37.0</sa-token-redis-jackson.version>
         <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
         <springfox-swagger-ui.version>2.9.2</springfox-swagger-ui.version>
         <swagger-bootstrap-ui.version>1.9.6</swagger-bootstrap-ui.version>
         <checkstyle.version>3.1.2</checkstyle.version>
         <easy-captcha.version>1.6.2</easy-captcha.version>
         <commons-collections4.version>4.4</commons-collections4.version>
+        <bcprov-jdk15to18.version>1.69</bcprov-jdk15to18.version>
+        <fastjson.version>1.2.62</fastjson.version>
     </properties>
 
     <dependencyManagement>
@@ -72,6 +76,18 @@
                 <artifactId>sa-token-spring-boot-starter</artifactId>
                 <version>${sa-token-spring-boot-starter.version}</version>
             </dependency>
+            <!-- Sa-Token 整合 jwt -->
+            <dependency>
+                <groupId>cn.dev33</groupId>
+                <artifactId>sa-token-jwt</artifactId>
+                <version>${sa-token-jwt.version}</version>
+            </dependency>
+            <!-- Sa-Token 整合 Redis （使用 jackson 序列化方式） -->
+            <dependency>
+                <groupId>cn.dev33</groupId>
+                <artifactId>sa-token-redis-jackson</artifactId>
+                <version>${sa-token-redis-jackson.version}</version>
+            </dependency>
             <!--Swagger-->
             <dependency>
                 <groupId>io.springfox</groupId>
@@ -100,15 +116,19 @@
                 <artifactId>commons-collections4</artifactId>
                 <version>${commons-collections4.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcprov-jdk15to18</artifactId>
+                <version>${bcprov-jdk15to18.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
-        </dependency>
-    </dependencies>
 
     <build>
         <plugins>

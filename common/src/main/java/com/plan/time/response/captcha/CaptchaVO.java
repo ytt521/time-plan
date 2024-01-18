@@ -1,4 +1,4 @@
-package com.plan.time.entity.captcha;
+package com.plan.time.response.captcha;
 
 import lombok.Builder;
 import lombok.Data;

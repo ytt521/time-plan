@@ -12,8 +12,9 @@ public class RedisConstants {
      * 图形验证码前缀
      */
     public static final String CAPTCHA_KEY = "captcha:";
+
     /**
-     * 图形验证码的过期时间
+     * 图形验证码的过期时间,5分钟
      */
-    public static final Integer CAPTCHA_EXPIRED_MINUTE = 5;
+    public static final Integer CAPTCHA_EXPIRED_MINUTE = 300;
 }

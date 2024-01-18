@@ -1,6 +1,6 @@
 package com.plan.time.controller;
 
-import com.plan.time.entity.captcha.CaptchaVO;
+import com.plan.time.response.captcha.CaptchaVO;
 import com.plan.time.result.R;
 import com.plan.time.service.CaptchaService;
 import io.swagger.annotations.Api;
