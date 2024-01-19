@@ -44,14 +44,12 @@ public class UserInfoServiceImpl extends ServiceImpl<UserInfoMapper, UserInfo> i
         if (!AESUtil.encrypt(userLoginDTO.getPassword(), secretKey.getBytes()).equals(userInfo.getPassword())) {
             return R.fail(UserInfoConstants.LOGIN_ERROR);
         }
-        String ipAddress = IpUtil.getIpAddress(request);
-        String ipSource = IpUtil.getIpSource(ipAddress);
+        // String ipAddress = IpUtil.getIpAddress(request);
+        // String ipSource = IpUtil.getIpSource(ipAddress);
         StpUtil.login(userInfo.getId(), SaLoginConfig
                 .setExtra("userName", userInfo.getUserName())
                 .setExtra("nickName", userInfo.getNickName())
-                .setExtra("id", userInfo.getId())
-                .setExtra("ipAddress", ipAddress)
-                .setExtra("ipSource", ipSource));
+                .setExtra("id", userInfo.getId()));
         return R.success(StpUtil.getTokenValue());
     }
 }
